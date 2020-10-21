@@ -1,5 +1,7 @@
 # Streaming Music Service for Graduate Networked Systems Course
 
+### Project Description
+
 In this project, you'll be designing and implementing a protocol of your own design to build a streaming music service.
 In class, we discussed a few approaches to building such a service: simple HTTP gets, a custom streaming protocol like RTSP, or DASH-like chunking via HTTP.
 For this project, we want you to try your hand at a custom protocol to learn all of the concerns that go into constructing one.
@@ -9,15 +11,13 @@ Since you will be developing the protocol, client, and server, there is no singl
 This is different from previous projects, where you have seen and implemented several types of protocols -- now you get to decide how to apply the patterns you've seen in a new scenario!
 
 
-### Requirements
+### Project Requirements
 
 * Your protocol should be implemented directly on top of sockets.  You should not, for instance, use an HTTP protocol or implementation.
 
-* We have provided skeleton code for a threaded client and server in Python.  Feel free to start from scratch in a different language or with a different architecture (e.g.,  select() statements).  If you choose a different language, you will be responsible for finding libraries that can play mp3 files.
-
 * Your server should be able to handle multiple clients simultaneously.  They should be able join and leave at any time, and the server should continue to operate seamlessly.
 
-* The client should be able to stream, i.e., start playing music before the mp3 has been downloaded.  Note that mp3s are designed exactly for this purpose!  If you start feeding  mp3 data frames to a music player, it will be able to play without needing the entire file.
+* The client should be able to stream, i.e., start playing music before the mp3 has been downloaded.  Note that mp3s are designed exactly for this purpose!  If you start feeding  mp3 data frames to a music player, it will be able to play without needing the entire file. **Note: I implemented this by having the client request 10,000ms of the song at a time. The client maintains the state of where it is in the song.**
 
 * Your client should be interactive and it should know how to handle at least the following commands:
     * `list`: Retrieve a list of songs that are available on the server, along with their ID numbers.
