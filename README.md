@@ -26,6 +26,6 @@ This is different from previous projects, where you have seen and implemented se
 
 * The client should not cache data. In other words, if the user tells the client to get a song list or play a song, the two should exchange messages to facilitate this. Don't retrieve an item from the server once and then repeat it back again on subsequent requests.
 
-* One of the parameters to your server should be a path to a directory that contains audio files. Within this directory, you may assume that any file ending in ".mp3" is an mp3 audio file. I have provided two files as a start.  Feel free to use those or your own mp3 files for testing. **Please do not submit audio files to Canvas!**
+* One of the parameters to your server should be a path to a directory that contains audio files. Within this directory, you may assume that any file ending in ".mp3" is an mp3 audio file. I have provided two files as a start.  Feel free to use those or your own mp3 files for testing. Please do not submit audio files to Canvas!
 
-* You are allowed to develop and demo this project outside of the Vagrant VM, but we have already set up the Vagrant VM to be compatible with playing audio programmatically.  It may also facilitate interoperability between partners with different OSes and installed packages.
+* You are allowed to develop and demo this project outside of the Vagrant VM, but we have already set up the Vagrant VM to be compatible with playing audio programmatically.  It may also facilitate interoperability between partners with different OSes and installed packages. **Note: I ended up doing this project outside of the VM because I wanted it to be usable without needing that specific setup.**
